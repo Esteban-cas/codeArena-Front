@@ -1,0 +1,205 @@
+/* Global Styles */
+.maincontainer {
+    color: #000000; /* Texto negro para mayor contraste */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0 20px;
+    -webkit-font-smoothing: antialiased; /* Mejora la visualización en dispositivos Apple */
+}
+
+/* Login Container */
+.login-container {
+    background: #ffffff; /* Fondo del contenedor cambiado a blanco */
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Sombras más suaves */
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    border: 1px solid #000; /* Contorno negro */
+    position: relative;
+    transform: translateZ(0);
+}
+
+/* Form */
+.Loginh2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #000000; /* Título en negro */
+}
+
+/* Form Fields */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000; /* Íconos en negro */
+    font-size: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 14px 14px 45px;
+    border: 2px solid rgba(0, 0, 0, 0.3); /* Contorno tenue */
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.05); /* Fondo claro */
+    color: #000; /* Texto negro */
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo más oscuro al enfocar */
+    border-color: #000; /* Contorno negro al enfocar */
+}
+
+.form-group input::placeholder {
+    color: #666; /* Placeholder en gris oscuro */
+}
+
+/* Links */
+.signup-link, .login-link {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.signup-link p, .login-link p {
+    font-size: 14px;
+    color: #000; /* Texto en negro */
+}
+
+.signup-text, .login-text {
+    color: #000; /* Links en negro */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.signup-text:hover, .login-text:hover {
+    color: #444; /* Texto más oscuro al pasar el cursor */
+    transform: scale(1.1);
+}
+
+/* Estilo del mensaje de error */
+.error {
+    color: #ff4d4d; /* Rojo claro para indicar error */
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+    border: 1px solid #ff4d4d;
+    background-color: rgba(255, 77, 77, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success {
+    color: green;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.escondido{
+    display: none;
+}
+
+/* Botón de enviar */
+.buttonSBM {
+  width: 150px;
+  padding: 0;
+  border: none;
+  align-items: center;
+  transform-origin: center;
+  font-family: "Gochi Hand", cursive;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #494a4b;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #5cdb95;
+}
+
+.buttonSBM span {
+  background: #f1f5f8;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid #494a4b;
+}
+
+.buttonSBM:active {
+  transform: translateY(5px);
+  padding-bottom: 0px;
+  outline: 0;
+}
+
+.inputbox {
+  position: relative;
+  width: 196px;
+}
+
+.inputbox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.inputbox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font-size: 1em;
+  color: #3a3a3a;
+  letter-spacing: 00.05em;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.inputbox input:valid ~span,
+.inputbox input:focus ~span {
+  color: #000000;
+  transform: translateX(-10px) translateY(-34px);
+  font-size: 0,75em;
+}
+
+.inputbox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #45f3ff;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.inputbox input:valid ~i,
+.inputbox input:focus ~i {
+  height: 44px;
+}

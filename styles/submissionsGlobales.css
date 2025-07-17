@@ -1,0 +1,31 @@
+/* este archivo muestra en cabecera los aciertos y errores de cada usuario*/
+.derecha { float: right; }
+
+.Aciertos,
+.Errores {
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+.Aciertos{
+    margin-bottom: 10px;
+    background-color: #28B9B5;
+}
+
+.Errores{
+    background-color: #F44336;
+}
+
+.Aciertos--texto,
+.Errores--texto {
+    float: left;
+    font-size: 13px;
+    color: #fff;
+    margin-top: 2px;
+}
+
+.aciertos--valor,
+.errores--valor {
+    letter-spacing: 1px;
+    float: left;
+}

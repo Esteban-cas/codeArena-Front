@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/client.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <title>Code Arena</title>
+</head>
+<body>
+    <section class="cabecero">
+        <div class="presupuesto"> 
+            <div class="presupuesto_titulo">
+                <h2>Admin board</h2>
+                
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <h2 style="text-align: center; color: white;">CRUD</h2>
+
+        <section class="objetivos" id="objetivos">  
+                    
+           <div class="container">
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                    <button class="btn btn-color"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    </div>
+                    <p class="user">Crear reto</p>
+                    <div class="add_tab">+</div>
+                </div>
+                <form id="createForm">
+                    <div class="terminal_body">
+                        <div class="terminal_prompt" data-id="create">
+                            <label class="terminal_user"> Reto: <input type="text" name="title" id="titulo"></label><br>
+
+                            <label class="terminal_user"> Descripción: <input type="text" name="description" id="descripcion"></label><br>
+
+                            <label class="terminal_user"> Dificultad: <input type="text" name="difficulty" id="dificultad"></label><br>
+
+                            <label class="terminal_user"> Categoría: <input type="text" name="category" id="categoria"></label><br>
+
+                            <label class="terminal_user"> Respuesta: <input type="text" name="answer" id="respuesta"></label><br>
+
+                            <br><br>
+                        </div>
+                        <div class="terminal_output">
+                            <pre class="output_text">Welcome to Terminal</pre>
+                        </div>
+                        <div class="terminal_input">
+                            <button class="create-btn" type="submit">Create</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </section>
+
+    </main>
+
+    <script>
+    const user = JSON.parse(localStorage.getItem('currentUser') || '{}')
+    if (user.role !== 'admin') {
+        window.location.href = '/pages/index.html'
+    }
+    </script>
+    <script type="module" src="../js/admin.js"></script>
+    <script src="../js/create.js"></script>
+</body>
+</html>

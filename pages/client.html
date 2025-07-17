@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/client.css">
+    <title>Code Arena</title>
+    <link rel="stylesheet" href="../styles/submissionsGlobales.css">
+</head>
+<body>
+    <section class="cabecero">
+        <div class="presupuesto"> 
+            <div class="presupuesto_titulo">
+                <h2>Code Arena</h2>
+                <p>Bienvenido a tu plataforma de desarrollo de software.</p>
+            </div>
+
+            <div class="Aciertos limpiarEstilos">
+                <div class="Aciertos--texto">
+                    <p>Aciertos</p>
+                </div>
+                <div class="derecha">
+                    <div class="aciertos--valor">
+                        <div id="totalAciertos">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="Errores limpiarEstilos">
+                <div class="Errores--texto">
+                    <p>Errores</p>
+                </div>
+                <div class="derecha y limpiarEstilos">
+                    <div class="errores--valor">
+                        <div id="totalErrores">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <h2 style="text-align: center; color: white;">Retos de programación</h2>
+        
+        <section class="objetivos" id="objetivos">  
+            <!--          
+            <div class="container">
+                <div class="terminal_toolbar">
+                    <div class="butt">
+                    <button class="btn btn-color"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    </div>
+                    <p class="user">codeArena@${userName}: ~/retos</p>
+                    <div class="add_tab">+</div>
+                </div>
+                <div class="terminal_body">
+                    <div class="terminal_prompt">
+                        <span class="terminal_user"> Reto:</span>
+                        <span class="terminal_location"> ${reto.title}</span><br>
+                        <span class="terminal_user"> Descripción:</span>
+                        <span class="terminal_location"> ${reto.description}</span><br>
+                        <span class="terminal_user"> Dificultad:</span>
+                        <span class="terminal_location"> ${reto.difficulty}</span><br><br>
+                    </div>
+                    <div class="terminal_output">
+                        <pre class="output_text">Welcome to Terminal</pre>
+                    </div>
+                    <div class="terminal_input">
+                        <input placeholder="Type your answer..." class="input_text" type="text" />
+                    </div>
+                </div>
+            </div>
+            -->
+                   
+        </section>
+
+    </main>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('currentUser') || '{}')
+        if (user.role !== 'cliente') {
+            window.location.href = '/pages/index.html'
+        }
+    </script>
+    <script src="../js/client.js"></script>
+    <script src="../js/global.js"></script>
+</body>
+</html>
